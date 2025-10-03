@@ -13,10 +13,11 @@ test('child windows',async({browser})=>{
     console.log(text);
     console.log(domain);
     page.pause();
+    // Save authentication state after login
+    await context.storageState({ path: 'auth.json' });
     const username=page.locator("#username");
 
     await username.fill(domain);
-    page.waitForTimeout(5000);
     page.pause();
     
 

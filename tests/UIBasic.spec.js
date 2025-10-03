@@ -4,6 +4,7 @@ test('Browsers context playwright test',async({browser})=>{
    const context= browser.newContext();
    const page=await context.newPage();
    await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
+   // the new function
 
 
 })
@@ -15,7 +16,6 @@ await page.locator('#username').fill('ujjwalpatel266@gmail.com');
 await page.locator('#password').fill('12dadada');
 
 await page.locator("[type= 'submit']").click();
-await page.locator("[style='display: block']").textcontent();
 console.log(page.locator('strong:has-text("Incorrect") ').textContent());
 
 })
