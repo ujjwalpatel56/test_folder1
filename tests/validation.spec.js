@@ -5,8 +5,8 @@ test.only('validation',async()=>{
     const context = await br.newContext();
     const page=await context.newPage();
     await page.goto("https://automationexercise.com/login");
-    await page.getByPlaceholder("Email Address").fill("testplaywright@gmail.com");
-    await page.getByPlaceholder("Password").fill("dasdk");
+    await page.locator("inout[@data]").fill("testplaywright@gmail.com");
+    await page.get("Password").fill("dasdk");
     await page.getByText("Login");
     await page.pause();
 
@@ -19,6 +19,7 @@ test("validation page",async({page})=>{
 // await page.goForward();
 //learnt debug mode type step one by one
 //also assertion 
+//function gievn for the following
 await expect(page.locator("#displayed-text")).toBeVisible();
 await page.locator("#hide-textbox").click();
 await expect(page.locator("#displayed-text")).toBeHidden();
