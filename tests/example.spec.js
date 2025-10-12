@@ -16,4 +16,7 @@ test('get started link', async ({ page }) => {
 
   // Expects page to have a heading with the name of Installation.
   await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
+  //the thing is done with the fact with mutual way.
+  //bug fix has been done
+  // the fact has been recreated
 });
